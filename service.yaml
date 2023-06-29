@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ashulb
+  name: ashulb
+  namespace: yuva-final-app  #your namespace here
+spec:
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector: # this is pod finder, so we have to use label of our pod here which is ashu-appweb defined in deployment file
+   app: ashu-appweb
+  type: ClusterIP
+status:
+  loadBalancer: {}
