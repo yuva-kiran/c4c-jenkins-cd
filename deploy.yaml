@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ashu-appweb
+  name: ashu-appweb
+  namespace: yuva-final-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashu-appweb
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ashu-appweb
+    spec:
+      containers:
+      - image: yuvaone/yuvawebnew:sec-check9
+        name: ashuweb
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
