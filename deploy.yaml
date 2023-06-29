@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ashu-appweb
   name: ashu-appweb
-  namespace: yuva-final-app
+  namespace: yuva-final-app  #your namespace here
 spec:
   replicas: 1
   selector:
@@ -19,7 +19,7 @@ spec:
         app: ashu-appweb
     spec:
       containers:
-      - image: yuvaone/yuvawebnew:sec-check9
+      - image: yuvaone/yuvawebnew:sec-check9  #latest image from docker hub
         name: ashuweb
         ports:
         - containerPort: 80
